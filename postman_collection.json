@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "1cbf0a10-a14c-496e-8bc3-49682e3f6b70",
+		"name": "simple-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@test.test\",\r\n    \"password\": \"12345\",\r\n    \"role\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"test@test.test\",\r\n\"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users-getAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsInJvbGUiOlt7InJvbGUiOiJ1c2VyIiwidXNlcl9yb2xlIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDIyLTAzLTEyVDE3OjUxOjI3LjY0OVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAzLTEyVDE3OjUxOjI3LjY0OVoiLCJ1c2VySWQiOjEsInJvbGVJZCI6MX19XSwiaWF0IjoxNjQ3MTA5MzAwLCJleHAiOjE2NDcxMTI5MDB9.8-S2ffTVjroP233fHiggL9fgSHPoJNDGLudgFafBGck",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role-getall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "role-create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0QHRlc3QudGVzdCIsInJvbGUiOlt7InJvbGUiOiJ1c2VyIiwidXNlcl9yb2xlIjp7ImlkIjoxLCJjcmVhdGVkQXQiOiIyMDIyLTAzLTEyVDE3OjUxOjI3LjY0OVoiLCJ1cGRhdGVkQXQiOiIyMDIyLTAzLTEyVDE3OjUxOjI3LjY0OVoiLCJ1c2VySWQiOjEsInJvbGVJZCI6MX19XSwiaWF0IjoxNjQ3MTA5MzAwLCJleHAiOjE2NDcxMTI5MDB9.8-S2ffTVjroP233fHiggL9fgSHPoJNDGLudgFafBGck",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"role\": \"USER\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"role"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
