@@ -9,7 +9,7 @@ const User = sequelize.define('user', {
 
 const Role = sequelize.define('role', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  role: { type: DataTypes.STRING, unique: true },
+  role: { type: DataTypes.STRING, unique: true, defaultValue: 'Admin' },
 });
 
 const UserRole = sequelize.define('user_role', {
@@ -21,4 +21,6 @@ Role.belongsToMany(User, { through: UserRole });
 
 module.exports = {
   User,
+  Role,
+  UserRole,
 };
